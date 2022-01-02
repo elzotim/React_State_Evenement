@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{Component} from 'react';
+import Mycars from './components/Mycars'
+import Cars from './components/Cars'
 
-function App() {
+class App extends Component {
+
+  state = {
+    titre :"Les deux catalogue Voiture",
+    titre3 :"jutilise direcetemt le cars.js sans passer pa mycars"
+  }
+  render(){
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Mycars title={this.state.titre}/>
+      <Cars  children ='tata'  colors="red" title={this.state.titre3} />
+      <Cars  children ='tata' title={this.state.titre3} />
+      <Cars   title={this.state.titre3} />
+
     </div>
   );
+}
 }
 
 export default App;
