@@ -8,20 +8,15 @@ const Cars = (props) => {
         ,margin :'5px auto',padding:'10px'
         }}>
             <h1 style={{textAlign:'center' ,color :"plum"}}>{props.title}</h1>
-          
+            
           <p >Marque :{props.children} </p>
+          <p >Age :{props.year} </p>
           {infosCouleur}
 
         </div>
     );  
   } else {
-       return (
-       <div className='Cars' style={{backgroundColor : 'pink',width : '400px'
-        ,margin :'5px auto',padding:'10px'
-        }}>
-       <p>Pas de data </p>
-       </div>
-       )
+       return null
     
 }};
 
