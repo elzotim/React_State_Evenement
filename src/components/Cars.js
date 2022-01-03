@@ -9,7 +9,7 @@ const Cars = (props) => {
         }}>
             <h1 style={{textAlign:'center' ,color :"plum"}}>{props.title}</h1>
           
-          <p>Marque :{props.children} </p>
+          <p >Marque :{props.children} </p>
           {infosCouleur}
 
         </div>

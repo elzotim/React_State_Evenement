@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1.style {
+  color :blue;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+button{
+  width:200px;
+  margin:0 50%;
+  position:relative;
+  left:-50px;
+}

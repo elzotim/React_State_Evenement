@@ -1,14 +1,26 @@
 import React ,{Component } from 'react';
 import Cars from "./Cars"
 class Mycars extends Component  {
-    state = {
-        t2 :"vous auriez le choix ",
-      }
+   NowCopies =()=>{
+    alert("merci de ne pas copier le texte ")
+  }
+  MOusehover =(e)=>{
+     console.log(e.target);
+     if (e.target.classList.contains('style')) {
+      e.target.classList.remove('style')
+     } else {
+      e.target.classList.add('style')
+     }
+  }
+
+   
     render (){
         console.log(this)
-      return   (<div>
-            <h1 style={{textAlign:'center' ,color :"plum"}}>{this.props.title}</h1>
-            <h2 style={{textAlign:'center' ,color :"plum"}}>{this.state.t2 }</h2>
+      return   (< div onCopy={this.NowCopies}>
+
+            <h1 onMouseOver={this.MOusehover} style={{textAlign:'center'}}>{this.props.title}</h1>
+            <p onCopy={this.NowCopies} style={{textAlign:'center' ,color :"plum"}}>Ne me compiespas 
+            </p>
             <Cars colors="blanc">Peugeot </Cars>
             <Cars >Renault</Cars> 
             <Cars colors="blanc"></Cars>
